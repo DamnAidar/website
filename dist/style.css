@@ -1,16 +1,17 @@
 {
-	font-family: "Roboto", sans-serif; /*шрифт*/
+
+	font-family: "Roboto", sans-serif;
 }
 body {
-	position: flex;
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh; /*область "видимости"*/
+	min-height: 100vh;
 	background: linear-gradient(to bottom, #ffe4e1, #350048); /*задал цвет фона*/
 }
 .container {
-	width: 1000px; /*пространство в ширину в которое могу входить кнопки*/
+	width: 300px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -31,25 +32,44 @@ body {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%; /*размер кнопок*/
-	display: flex; /*текст подстраивается под размеры окна*/
-	justify-content: center;/*расположение текста*/
-	align-items: center; /*расположение текста*/
-	box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3); /*контраст кнопки*/
-	text-decoration: none; /*удаление подчеркивания*/
-	color: #FFFF00;
+	height: 100%;/*размер кнопок*/
+    display: flex; /*текст подстраивается под размеры окна*/
+    justify-content: center;/*расположение текста*/
+    align-items: center; /*расположение текста*/
+	background: rgba(255, 255, 255, 0.05);
+	box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 30px;
+	padding: 10px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	overflow: hidden;
+	color: #fff;
+	font-weight: 400px;
+	z-index: 1;
+	transition: 0.5s;
 	backdrop-filter: blur(15px);
 }
-
-.container .btn a::before {
+.container .btn::before {
 	content: "";
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 50%;
-	height: 100%;
-	background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
-	transform: skewX(45deg) translate(0);
-	filter: blur(0px);
+	left: 50%;
+	transform: translatex(-50%);
+	bottom: -5px;
+	width: 30px;
+	height: 10px;
+	background: #f00;
+	border-radius: 10px;
+	transition: 0.5s;
+	transition-delay: 0.5;
 }
+.container .btn:hover::before  {
+	bottom: 0;
+	height: 50%;
+	width: 80%;
+	border-radius: 30px;
+}
+
+
 
