@@ -1,0 +1,22 @@
+body {
+margin: 0;
+padding: 0;
+}
+
+#header {
+        height: 200px;
+        text-align: center;
+        font-size: 14pt;
+        padding: 10px 0 10px 40px;
+        }
+
+#content {
+height: 300px;
+font-size: 12pt;
+}
+
+#footer {
+height: 200px;
+text-align: center;
+font-size: 14pt;
+}
